@@ -1,0 +1,58 @@
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .loading.show {
+    opacity: 1;
+  }
+  
+  .loading img {
+    width: 100px;
+    height: 100px;
+    animation: spin 3s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes wavyMotion {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    25% {
+      transform: translateY(-5px) translateX(5px);
+    }
+    50% {
+      transform: translateY(0) translateX(0);
+    }
+    75% {
+      transform: translateY(5px) translateX(-5px);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+  
+  .loading-text {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    animation: wavyMotion 2s ease-in-out infinite;
+  }
+  
